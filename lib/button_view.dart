@@ -32,6 +32,9 @@ class SignInButton extends StatelessWidget {
   // overrides the default button elevation
   final double elevation;
 
+/// overrides the default button max width
+  final double maxWidth;
+
   /// The constructor is fairly self-explanatory.
   const SignInButton(
     this.button, {
@@ -42,6 +45,7 @@ class SignInButton extends StatelessWidget {
     this.shape,
     this.text,
     this.elevation = 2.0,
+        this.maxWidth = 220.0,
   })  : assert(
             mini != true ||
                 !(button == Buttons.Google ||
@@ -87,6 +91,7 @@ class SignInButton extends StatelessWidget {
           innerPadding: const EdgeInsets.all(0),
           shape: shape,
           height: 36.0,
+          width: maxWidth,
         );
       case Buttons.Facebook:
       case Buttons.FacebookNew:
